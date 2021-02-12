@@ -20,7 +20,7 @@ def normalize_adjacency(adj):
     """
     adj = adj + sparse.eye(adj.shape[0])
 
-    node_degrees = np.array(adj.sum(1))
+    node_degrees = np.array(adj.sum(axis=1))
     node_degrees = np.power(node_degrees, -0.5).flatten()
     node_degrees[np.isinf(node_degrees)] = 0.0
     node_degrees[np.isnan(node_degrees)] = 0.0
@@ -62,6 +62,7 @@ def load_data(config):
     raw_edges_data = np.genfromtxt(config.edges_path, dtype="int32")
     edges_ordered = np.array(list(map(ids_ordered.get, raw_edges_data.flatten())),
                              dtype='int32').reshape(raw_edges_data.shape)
+
     ###################
     # ADJACENCY MATRIX
     ###################
