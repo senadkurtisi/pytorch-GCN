@@ -1,6 +1,5 @@
-from model import GCN
-from utils import *
 from globals import config
+from utils import *
 
 
 if __name__ == "__main__":
