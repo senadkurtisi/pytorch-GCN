@@ -10,4 +10,4 @@ if __name__ == "__main__":
     dataset = prepare_dataset(features, labels, NUM_CLASSES, config)
 
     model = GCN(features.shape[1], config.hidden_dim,
-                NUM_CLASSES, config.use_bias)
+                NUM_CLASSES, config.dropout, config.use_bias)
