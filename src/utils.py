@@ -120,4 +120,4 @@ def load_data(config):
 
     print("Dataset loaded.")
 
-    return features, labels, adj
+    return features, labels, adj, edges_ordered
