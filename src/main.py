@@ -3,9 +3,11 @@ from model import GCN
 from utils import *
 from globals import config
 from training_evaluation import *
+from visualization import visualize_graph
 
 if __name__ == "__main__":
-    features, labels, adj = load_data(config)
+    features, labels, adj, edges = load_data(config)
+    visualize_graph(edges, labels.cpu().tolist())
     NUM_CLASSES = int(labels.max().item() + 1)
 
     train_set_ind, val_set_ind, test_set_ind = prepare_dataset(labels, NUM_CLASSES, config)
