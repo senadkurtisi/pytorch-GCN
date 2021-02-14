@@ -6,6 +6,7 @@ PyTorch implementation of the [Graph Convolutional Network](https://arxiv.org/ab
 * [Dataset](#dataset)
 * [GCN Architecture](#gcn-architecture)
 * [Results](#results)
+* [Training] (#training)
 * [Instructions](#setup-&-instructions)
 * [Acknowledgements](#acknowledgements)
 
@@ -26,6 +27,7 @@ Below we can see the Cora dataset visualized. The size of each node is directly 
 
 <img src="imgs/cora_visualized.png" width="750" height="750">
 
+The visualization was inspired by [Aleksa's GAT implementation](https://github.com/gordicaleksa/pytorch-GAT).
 
 ## GCN Architecture
 Graph Convolutional Neural Network is a first-order approximation of the spectral graph convolutions.
@@ -46,4 +48,31 @@ Validation loss and accuracy we see below were obtained by using early stopping.
 The 7-dim embeddings learned by the GCN model were projected into **2D** space by using [t-SNE](https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding).
 As we can see, the model has learned some useful information about the graph structure and the node features in particular.
 
-<img src="imgs/tSNE.png">
+<img src="imgs/tSNE.png" width="612" height="400">
+
+
+### Classification results
+The training of the GCN model was performed in 100 distinct runs with and without using early stopping. For early stopping a patience of 10 epochs was used. The results are similar most of the time.
+By repeating this process several times lowest accuracy achieved was **80%** and the highest was **83%**. But besides that the results given in the table below were most dominant.
+
+|  Mean Acc.   |  Std. Acc.   |  Mean loss  |  Std. loss |
+|:---:|:---:|:---:|:---:|
+| 0.81 | 0.01 | 0.65 | 0.02 |
+
+
+## Training
+Training of the model takes approximately 2.1 seconds on the Cora dataset by using GTX1650Ti. </br>
+This is highly dependent on the dataset used, since the graphs which represent social media platforms can be enormous and have millions of nodes, let alone edges.
+
+## Setup & Instructions
+1. Open Anaconda Prompt and navigate to the directory of this repo by using: ```cd PATH_TO_THIS_REPO ```
+2. Execute ``` conda env create -f environment.yml ``` This will set up an environment with all necessary dependencies. 
+3. Activate previously created environment by executing: ``` conda activate pytorch-gcn ```
+4. Run ``` main.py ``` in your IDE or via command line by executing ``` python src/main.py ```. All of the arguments specified in the ``` config ``` object from
+   [globals.py](src/globals.py) can be modified in the command line.
+   
+## Acknowledgements
+These repos were very helpful for me:
+* [Official PyTorch GCN Implementation by Kipf et al.](https://github.com/tkipf/gcn)
+* [PyTorch Geometric](https://github.com/rusty1s/pytorch_geometric)
+* [Aleksa's GAT implementation](https://github.com/gordicaleksa/pytorch-GAT)
