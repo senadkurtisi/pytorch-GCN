@@ -6,7 +6,7 @@ PyTorch implementation of the [Graph Convolutional Network](https://arxiv.org/ab
 * [Dataset](#dataset)
 * [GCN Architecture](#gcn-architecture)
 * [Results](#results)
-* [Training] (#training)
+* [Training](#training)
 * [Instructions](#setup-&-instructions)
 * [Acknowledgements](#acknowledgements)
 
