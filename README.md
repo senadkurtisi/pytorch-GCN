@@ -68,8 +68,8 @@ This is highly dependent on the dataset used, since the graphs which represent s
 1. Open Anaconda Prompt and navigate to the directory of this repo by using: ```cd PATH_TO_THIS_REPO ```
 2. Execute ``` conda env create -f environment.yml ``` This will set up an environment with all necessary dependencies. 
 3. Activate previously created environment by executing: ``` conda activate pytorch-gcn ```
-4. Run ``` main.py ``` in your IDE or via command line by executing ``` python src/main.py ```. All of the arguments specified in the ``` config ``` object from
-   [globals.py](src/globals.py) can be modified in the command line.
+4. Run ``` main.py ``` in your IDE or via command line by executing ``` python src/main.py ```. </br>
+All of the arguments specified in the ``` config ``` object from [globals.py](src/globals.py) can be modified in the command line.
    
 ## Acknowledgements
 These repos were very helpful for me:
