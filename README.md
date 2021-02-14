@@ -38,4 +38,12 @@ The *input layer* takes the input features of each node batched together. These 
 
 ## Results
 ### Validation peformance
-<img src="imgs/validation_performance.png" width="411" height="253">
+
+Validation loss and accuracy we see below were obtained by using early stopping. The training was set to maximum of **200 epochs** as specified in the paper. If the validation loss hasn't improved for 10 epochs, the training is stopped. The model which was trained in this iteration achieved an accuracy of `83%` on the test set.
+<img src="imgs/validation_performance.png" height="370">
+
+### Learned representation 
+The 7-dim embeddings learned by the GCN model were projected into **2D** space by using [t-SNE](https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding).
+As we can see, the model has learned some useful information about the graph structure and the node features in particular.
+
+<img src="imgs/tSNE.png">
