@@ -66,7 +66,7 @@ By repeating this process several times lowest accuracy achieved was **80%** and
 
 
 ## Training
-Training of the model takes approximately 2.1 (for 200 epochs) seconds on the Cora dataset by using GTX 1650Ti GPU. </br>
+Training of the model takes approximately 2.1 seconds (for 200 epochs) on the Cora dataset by using GTX 1650Ti GPU. </br>
 This is highly dependent on the dataset used, since the graphs which represent social media platforms can be enormous and have millions of nodes, let alone edges.
 
 ## Setup & Instructions
