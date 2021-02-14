@@ -32,7 +32,7 @@ The visualization was inspired by [Aleksa's GAT implementation](https://github.c
 ## GCN Architecture
 Graph Convolutional Neural Network is a first-order approximation of the spectral graph convolutions.
 </br>
-Below we can see the illustration of the architecture. This illustration was taken from the official [GCN paper](https://arxiv.org/abs/1609.02907)
+Below we can see the illustration of the architecture. This illustration was taken from the official [GCN paper](https://arxiv.org/abs/1609.02907).
 
 <img src="imgs/gcn_architecture.png" width="750" height="375">
 
@@ -41,7 +41,7 @@ The *input layer* takes the input features of each node batched together. These 
 ## Results
 ### Validation peformance
 
-Validation loss and accuracy we see below were obtained by using early stopping. The training was set to maximum of **200 epochs** as specified in the paper. If the validation loss hasn't improved for 10 epochs, the training is stopped. The model which was trained in this iteration achieved an accuracy of `83%` on the test set.
+Validation loss and accuracy we see below were obtained by using early stopping. The training was set to maximum of **200 epochs** as specified in the paper. If the validation loss hasn't improved for 10 epochs, the training is stopped. The model which was trained in this run achieved an accuracy of ```82%``` on the test set.
 <img src="imgs/validation_performance.png" height="370">
 
 ### Learned representation 
@@ -53,11 +53,11 @@ As we can see, the model has learned some useful information about the graph str
 
 ### Classification results
 The training of the GCN model was performed in 100 distinct runs with and without using early stopping. For early stopping a patience of 10 epochs was used. The results are similar most of the time.
-By repeating this process several times lowest accuracy achieved was **80%** and the highest was **83%**. But besides that the results given in the table below were most dominant.
+By repeating this process several times lowest accuracy achieved was **80%** and the highest was about **83%**. But besides that the results given in the table below were most dominant.
 
 |  Mean Acc.   |  Std. Acc.   |  Mean loss  |  Std. loss |
 |:---:|:---:|:---:|:---:|
-| 0.81 | 0.01 | 0.65 | 0.02 |
+| 81.0 | 1.0 | 0.65 | 0.02 |
 
 
 ## Training
