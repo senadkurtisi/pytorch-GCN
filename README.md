@@ -36,7 +36,9 @@ Graph Convolutional Neural Network is a first-order approximation of the spectra
 </br>
 Below we can see the illustration of the architecture. This illustration was taken from the official [GCN paper](https://arxiv.org/abs/1609.02907).
 
+<div align="center">
 <img src="imgs/gcn_architecture.png" width="750" height="375">
+</div>
 
 The *input layer* takes the input features of each node batched together. These features are then forward propagated through **one hidden** layer and the output layer with 7-dim output (since there are 7 classes).
 
@@ -50,8 +52,9 @@ Validation loss and accuracy we see below were obtained by using early stopping.
 The 7-dim embeddings learned by the GCN model were projected into **2D** space by using [t-SNE](https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding).
 As we can see, the model has learned some useful information about the graph structure and the node features in particular.
 
+<div align="center">
 <img src="imgs/tSNE.png" width="612" height="400">
-
+</div>
 
 ### Classification results
 The training of the GCN model was performed in 100 distinct runs with and without using early stopping. For early stopping a patience of 10 epochs was used. The results are similar most of the time.
