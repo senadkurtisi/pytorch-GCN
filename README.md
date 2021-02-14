@@ -19,11 +19,11 @@ On the other hand there is a specific class of problems which can be represented
 ## Dataset
 The dataset used in this implementation is **Cora**. Cora consists out of **2708 nodes** and **5429 edges**. </br></br>
 Each node represents a particular science paper and each node is represented by the **1433** features. Each node also has one class assigned to it based on the area of research this paper was devoted to. There are **7 classes in total**.</br> </br>
-Each edge represents the citation between the two connected papers. These edges are directioned in the original form, since paper A cites paper B, so the direction of edge has certain meaning, but the authors in the Kipf et al. transformed all of the edges in the undirectioned form, and so did I.
+Each edge represents the citation between the two connected papers. These edges are directioned in the original form, since paper A cites paper B, so the direction of edge has certain meaning, but the authors in the Kipf et al. transformed all of the edges into the undirectioned form, and so did I.
 </br>
 
 ### Visualization
-Below we can see the Cora dataset visualized. The size of each node is directly proportional to the degree of that node. The degree of a node corresponds to the number of outgoing and incoming edges of a node. Since this "transformed" edges are undirected, degree of a node is just a number of edges connected to that node.
+Below we can see the Cora dataset visualized. The size of each node is directly proportional to the degree of that node. In this case the degree of a node corresponds to the number of edges connected to that node.
 
 <div align="center">
 <img align="center" src="imgs/cora_visualized.png" width="750" height="750">
