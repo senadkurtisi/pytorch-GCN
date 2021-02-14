@@ -17,6 +17,9 @@ def training_loop(model, features, labels, adj, train_set_ind, val_set_ind, conf
                                  weight_decay=config.weight_decay)
     criterion = nn.CrossEntropyLoss()
 
+    validation_acc = []
+    validation_loss = []
+
     if config.use_early_stopping:
         last_min_val_loss = float('inf')
         patience_counter = 0
@@ -37,6 +40,9 @@ def training_loop(model, features, labels, adj, train_set_ind, val_set_ind, conf
             model.eval()
             val_loss = criterion(y_pred[val_set_ind], labels[val_set_ind])
             val_acc = accuracy(y_pred[val_set_ind], labels[val_set_ind])
+
+            validation_loss.append(val_loss.item())
+            validation_acc.append(val_acc)
 
             if config.use_early_stopping:
                 if val_loss < last_min_val_loss:
@@ -65,6 +71,8 @@ def training_loop(model, features, labels, adj, train_set_ind, val_set_ind, conf
     if not config.multiple_runs:
         print(f"Total training time: {t_end-t_start:.2f}")
 
+    return validation_acc, validation_loss
+
 
 def evaluate_on_test(model, features, labels, adj, test_ind, config):
     if config.cuda:
@@ -84,6 +92,7 @@ def evaluate_on_test(model, features, labels, adj, test_ind, config):
     if not config.multiple_runs:
         print()
         print(f"Test loss: {test_loss:.3f}  |  Test acc: {test_acc:.2f}")
+        return y_pred
     else:
         return test_acc.item(), test_loss.item()
 

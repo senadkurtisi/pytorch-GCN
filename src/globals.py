@@ -18,7 +18,7 @@ parser.add_argument("--weight_decay", type=float, default=5e-3)
 parser.add_argument("--patience", type=int, default=10)
 parser.add_argument("--epochs", type=int, default=200)
 parser.add_argument("--use_early_stopping", type=bool, default=True)
-parser.add_argument("--multiple_runs", type=bool, default=True)
+parser.add_argument("--multiple_runs", type=bool, default=False)
 parser.add_argument("--num_of_runs", type=int, default=100)
 parser.add_argument("--follow_paper", type=bool, default=False)
 
