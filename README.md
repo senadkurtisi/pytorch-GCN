@@ -78,6 +78,6 @@ All of the arguments specified in the ``` config ``` object from [globals.py](sr
    
 ## Acknowledgements
 These repos were very helpful for me:
-* [Official PyTorch GCN Implementation by Kipf et al.](https://github.com/tkipf/gcn)
+* [Official PyTorch GCN Implementation by Kipf et al.](https://github.com/tkipf/pygcn)
 * [PyTorch Geometric](https://github.com/rusty1s/pytorch_geometric)
 * [Aleksa's GAT implementation](https://github.com/gordicaleksa/pytorch-GAT)
