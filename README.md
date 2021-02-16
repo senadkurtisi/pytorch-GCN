@@ -6,7 +6,7 @@ PyTorch implementation of the [Graph Convolutional Network](https://arxiv.org/ab
 * [Dataset](#dataset)
 * [GCN Architecture](#gcn-architecture)
 * [Results](#results)
-* [Instructions](#setup-&-instructions)
+* [Instructions](#setup-and-instructions)
 * [Acknowledgements](#acknowledgements)
 
 ## Graph Neural Networks 
@@ -63,7 +63,7 @@ By repeating this process several times lowest accuracy achieved was **80%** and
 | 81.0 | 1.0 | 0.65 | 0.02 |
 
 
-## Setup & Instructions
+## Setup and Instructions
 1. Open Anaconda Prompt and navigate to the directory of this repo by using: ```cd PATH_TO_THIS_REPO ```
 2. Execute ``` conda env create -f environment.yml ``` This will set up an environment with all necessary dependencies. 
 3. Activate previously created environment by executing: ``` conda activate pytorch-gcn ```
