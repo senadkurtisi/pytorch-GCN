@@ -6,7 +6,6 @@ PyTorch implementation of the [Graph Convolutional Network](https://arxiv.org/ab
 * [Dataset](#dataset)
 * [GCN Architecture](#gcn-architecture)
 * [Results](#results)
-* [Training](#training)
 * [Instructions](#setup-&-instructions)
 * [Acknowledgements](#acknowledgements)
 
@@ -63,10 +62,6 @@ By repeating this process several times lowest accuracy achieved was **80%** and
 |:---:|:---:|:---:|:---:|
 | 81.0 | 1.0 | 0.65 | 0.02 |
 
-
-## Training
-Training of the model takes approximately 2.1 seconds (for 200 epochs) on the Cora dataset by using GTX 1650Ti GPU. </br>
-This is highly dependent on the dataset used, since the graphs which represent social media platforms can be enormous and have millions of nodes, let alone edges.
 
 ## Setup & Instructions
 1. Open Anaconda Prompt and navigate to the directory of this repo by using: ```cd PATH_TO_THIS_REPO ```
