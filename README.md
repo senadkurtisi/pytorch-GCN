@@ -10,10 +10,7 @@ PyTorch implementation of the [Graph Convolutional Network](https://arxiv.org/ab
 * [Acknowledgements](#acknowledgements)
 
 ## Graph Neural Networks 
-Graph Neural networks are a family of neural networks that can deal with the data which isn't organized in some strict manner like in a grid or sequence. </br>
-For example images are organized in a MxN grid, where M is the number of vertical and N is the number of horizontal pixels. Time-series data is organized in some sequential manner. </br>
-</br>
-On the other hand there is a specific class of problems which can be represented as nodes/vertices which can (but don't have to) be connected via some edges. An example of this is friendship representation of some social media platform. Since there aren't any hard constraints on how the graph should look like we must use a specific family of neural networks called **Graph Neural Networks** or **GNNs** for short.
+Graph Neural networks are a family of neural networks that can deal with the data which represent a specific class of problems which can be represented as graphs. Graphs contain nodes/vertices which can (but don't have to) be connected via some edges. An example of this is friendship representation of some social media platform. Since there aren't any hard constraints on how the graph should look like we must use a specific family of neural networks called **Graph Neural Networks** or **GNNs** for short.
 
 ## Dataset
 The dataset used in this implementation is **Cora**. Cora consists out of **2708 nodes** and **5429 edges**. </br>
