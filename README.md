@@ -80,3 +80,6 @@ These repos were very helpful for me:
 * [Official PyTorch GCN Implementation by Kipf et al.](https://github.com/tkipf/pygcn)
 * [PyTorch Geometric](https://github.com/rusty1s/pytorch_geometric)
 * [Aleksa's GAT implementation](https://github.com/gordicaleksa/pytorch-GAT)
+
+## Licence
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
