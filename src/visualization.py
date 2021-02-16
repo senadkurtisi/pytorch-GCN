@@ -61,7 +61,7 @@ def visualize_graph(edges, node_labels, save=False):
 
 
 def visualize_validation_performance(val_acc, val_loss):
-    f, axs = plt.subplots(1, 2, figsize=(11, 5.5))
+    f, axs = plt.subplots(1, 2, figsize=(13, 5.5))
     axs[0].plot(val_loss, linewidth=2, color="red")
     axs[0].set_title("Validation loss")
     axs[0].set_ylabel("Cross Entropy Loss")

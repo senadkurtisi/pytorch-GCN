@@ -69,7 +69,7 @@ def training_loop(model, features, labels, adj, train_set_ind, val_set_ind, conf
         t_end = time.time()
 
     if not config.multiple_runs:
-        print(f"Total training time: {t_end-t_start:.2f}")
+        print(f"Total training time: {t_end-t_start:.2f} seconds")
 
     return validation_acc, validation_loss
 
@@ -101,8 +101,10 @@ def multiple_runs(model, features, labels, adj, indices, config, training_loop, 
     train_set_ind, val_set_ind, test_set_ind = indices
     acc = []
     loss = []
+
+    t1 = time.time()
     for i in range(config.num_of_runs):
-        print("Run:", i)
+        print("Run:", i+1)
         model.initialize_weights()
         training_loop(model, features, labels, adj,
                       train_set_ind, val_set_ind, config)
@@ -114,3 +116,4 @@ def multiple_runs(model, features, labels, adj, indices, config, training_loop, 
 
     print(f"ACC:  mean: {np.mean(acc):.2f} | std: {np.std(acc):.2f}")
     print(f"LOSS: mean: {np.mean(loss):.2f} | std: {np.std(loss):.2f}")
+    print(f"Total training time: {time.time()-t1:.2f} seconds")
