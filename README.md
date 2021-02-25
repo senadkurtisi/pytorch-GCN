@@ -17,6 +17,7 @@ The dataset used in this implementation is **Cora**. Cora consists out of **2708
 * Each node represents a particular science paper and each node is represented by the **1433** features. Each node also has one class assigned to it based on the area of research this paper was devoted to. There are **7 classes in total**.</br>
 * Each edge represents the citation between the two connected papers. These edges are directioned in the original form, since paper A cites paper B, so the direction of edge has certain meaning, but the authors in the Kipf et al. transformed all of the edges into the undirectioned form, and so did I.
 
+
 ### Visualization
 Below we can see the Cora dataset visualized. The size of each node is directly proportional to the degree of that node. In this case the degree of a node corresponds to the number of edges connected to that node.
 
